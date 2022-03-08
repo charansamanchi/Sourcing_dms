@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="publicrepository.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                     <content >
+                    <core:ComponentContainer id = "cc" usage="documentTable" height="100%" async="false" manifest="true" componentCreated=".onComponentCreated"/>
+                    </content >
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

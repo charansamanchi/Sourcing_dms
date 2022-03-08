@@ -1,0 +1,12 @@
+{
+  "authenticationMethod": "route",
+  "routes": [
+    {
+        "source": "^/public/(.*)$",
+        "target": "/public/$1",
+        "authenticationType": "none",
+        "destination": "sdibackend"
+      }
+  ],
+  "welcomeFile": "/publicrepository"
+}
