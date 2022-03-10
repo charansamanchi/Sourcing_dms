@@ -15,22 +15,16 @@ sap.ui.define([
 			   oRouter.getRoute("RouteView1").attachPatternMatched(function (oEvent) {
                 debugger;
               oArgs = oEvent.getParameter("arguments");
+              this.getComponentContainer().setSettings(this.getComponentSettings());
             },this);
                 this.oPage = this.getView().byId("page");
-                this.getComponentContainer().setSettings(this.getComponentSettings());
             },
 
-            _onRouteMatched : function (oEvent) {
-                debugger;
-              oArgs = oEvent.getParameter("arguments");
-               var oView = this.getView();
-            },
-
-            getComponentSettings: function(oArgs) {
+            getComponentSettings: function() {
                 debugger;
                 return  {
                   destinationPath: "/public",
-                  publicLinkId: oArgs.pubLinkId
+                  publicLinkId: oArgs.pubid
                 };
               },
       
@@ -49,7 +43,7 @@ sap.ui.define([
               this._loadRepositoryAndObjectId();
               },
         
-              _loadRepositoryAndObjectId: function (oArgs) {
+              _loadRepositoryAndObjectId: function () {
                 this._oDocumentTable.requestNavigationAndOpen('145f82b9-2bd6-4975-b163-754a93ab9901', oArgs.objId);
             }
         });

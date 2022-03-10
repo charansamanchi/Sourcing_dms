@@ -108,7 +108,7 @@
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": "public/v1/open/pubLinkId={pubLinkId}&objId={objId}",
+          "pattern": "public/v1/open/pubLinkId={pubid}&objId={objId}",
           "target": [
             "TargetView1"
           ]
