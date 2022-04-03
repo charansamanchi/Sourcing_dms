@@ -19,6 +19,10 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "4.0"
         }
+      },
+      "currentuser1" : {
+            "uri": "/user-api/currentUser",
+            "type": "JSON"
       }
     }
   },
@@ -86,6 +90,18 @@
           "earlyRequests": true,
           "groupId": "$direct"
         }
+      },
+      "userapi" : {
+          "type": "sap.ui.model.json.JSONModel",
+          "dataSource": "currentuser1", 
+          "preload": true,
+          "settings": {
+            "synchronizationMode": "None",
+            "operationMode": "Server",
+            "autoExpandSelect": true,
+            "earlyRequests": true,
+            "groupId": "$direct"
+          } 
       }
     },
     "resources": {
